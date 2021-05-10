@@ -1,0 +1,29 @@
+Task : Print the prime numbers which are between 1 to entered limit number (n).
+
+You can use a nested for loop. Collect all these numbers into a list The desired output for n=100 : [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+
+1.Solution:
+
+for num in range(2,101):
+    
+    for i in range(2,num):
+        if (num%i==0):
+            break
+    else:
+        print(num)
+        
+        
+ 2.solution:
+ 
+minimum = int(input(" Please Enter the Minimum Value: "))
+maximum = int(input(" Please Enter the Maximum Value: "))
+
+for Number in range (minimum, maximum + 1):
+    count = 0
+    for i in range(2, (Number//2 + 1)):
+        if(Number % i == 0):
+            count = count + 1
+            break
+
+    if (count == 0 and Number != 1):
+        print(" %d" %Number, end = '  ')
